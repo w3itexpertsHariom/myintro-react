@@ -1,0 +1,147 @@
+#kenburn .sy-active {
+    opacity: 0;
+    position: absolute;
+    transition: all 4s ease;
+    animation: left-right 10s linear infinite alternate !important;
+}
+
+#kenburn .sy-active img {
+    width: 100vw;
+    height: 100vh;
+    transform: scale(1.1);
+    object-fit: cover;
+}
+
+.show {
+    opacity: 1 !important;
+    transition: all 4s ease;
+}
+
+
+@keyframes left-right {
+    0% {
+        transform: translate(-50px, -50px);
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+.video-background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+}
+
+.cosur_container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#custom_cursor {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: gray;
+    z-index: 999999999;
+    border-radius: 100%;
+    pointer-events: none;
+    scroll-behavior: 'smooth';
+}
+
+#custom_cursor::after {
+    content: '';
+    position: absolute;
+    padding: 15px;
+    border: 2px solid var(--primary);
+    z-index: 9999999999;
+    border-radius: 100%;
+    left: -15px;
+    top: -15px;
+}
+
+
+
+.swiper-pagination {
+    display: flex;
+    gap: 2px;
+    margin-top: 30px;
+}
+
+.swiper-pagination span {
+    display: block !important;
+    width: 43px !important;
+    height: 3px !important;
+    background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+    background-color: var(--primary) !important;
+}
+
+.modal {
+    z-index: 1050 !important;
+}
+
+.modal-backdrop {
+    opacity: 0.5;
+    transition: all .5s linear;
+}
+
+.show {
+    transform: translateY(0%);
+    animation: topTobottom .5s linear backwards;
+}
+
+@keyframes topTobottom {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
+
+.zIndex {
+    z-index: 5 !important;
+}
+
+.zIndex2 {
+    z-index: 0 !important;
+}
+
+.LIGHTGALLERY {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    column-gap: 10px;
+    row-gap: 10px;
+    z-index: 9999999999 !important;
+}
+
+/* switchr overlay */
+.switcher-demo {
+    transition: all .3s linear;
+    z-index: 999999999;
+}
+
+.switcher_overlay {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    cursor: pointer;
+    background: #000;
+    top: 0;
+    z-index: 9999;
+    opacity: 0.3;
+    transition: all .5s linear;
+
+}
